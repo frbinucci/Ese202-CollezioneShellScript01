@@ -1,14 +1,17 @@
 #!/bin/bash
 
-#Nel caso in cui il numero di argomenti inseriti sia maggiore o minore di 1 verrà stampato un messaggio di errore
+#Nel caso in cui il numero di argomenti inseriti sia maggiore di 1 o uguale a 0 verrà stampato un messaggio di errore e lo script retituirà l'exit code 1
 if [ $# -gt 1 -o $# -eq 0 ]
 then
+	echo
 	echo "Inserire uno e un solo argomento!"
 	exit 1
 fi
 
-#Controllo per la verifica della presenza del file con il nome passato in input
-if [ -e $1 ]
+echo
+
+#Controllo per la verifica della presenza del file con il nome passato come argomento
+if [ -e $@ ]
 then
 	echo "File trovato!"
 else
