@@ -14,7 +14,7 @@ fi
 #Ciclo necessario alla ricerca dei file con il nome uguale a quello inserito come argomento
 for i in $@
 do
-	if [ -e $i ]
+	if [ -f $i ]
 	then
 		b=1
 		break

@@ -4,14 +4,16 @@
 if [ $# -gt 1 -o $# -eq 0 ]
 then
 	echo
-	echo "Inserire uno e un solo argomento!"
+	echo "Inserire uno ed un solo argomento!"
 	exit 1
 fi
+
+
 
 echo
 
 #Controllo per la verifica della presenza del file con il nome passato come argomento
-if [ -e $@ ]
+if [ -f $@ ]
 then
 	echo "File trovato!"
 else
